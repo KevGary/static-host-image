@@ -1,4 +1,4 @@
-FROM node:4.2.2
+FROM node:argon
 
 # Create app directory
 RUN mkdir -p /usr/src/static-host
@@ -11,6 +11,6 @@ RUN npm install
 # Bundle app source
 COPY . /usr/src/static-host
 
-EXPOSE 8080
+EXPOSE 8090
 
 CMD [ "npm", "start" ]
